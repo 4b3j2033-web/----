@@ -68,7 +68,8 @@ trackRows.forEach((track) => {
         trackRows.forEach((row) => {
             const isSelected = row === track;
             row.classList.toggle("is-selected", isSelected);
-            row.setAttribute("aria-pressed", String(isSelected));
+            if (isSelected) row.setAttribute("aria-current", "true");
+            else row.removeAttribute("aria-current");
         });
 
         if (playerMedia && currentTrack && currentArtist && track.dataset.video) {
@@ -88,5 +89,4 @@ trackRows.forEach((track) => {
             }
         }
     });
-    track.setAttribute("aria-pressed", String(track.classList.contains("is-selected")));
 });

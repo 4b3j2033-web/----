@@ -402,6 +402,7 @@ button { font: inherit; }
     background: transparent;
     color: var(--ink);
     cursor: pointer;
+    text-decoration: none;
     text-align: left;
     transition: padding .2s, color .2s;
 }
